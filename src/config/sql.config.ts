@@ -3,7 +3,7 @@ import {Dialect} from "sequelize";
 require('dotenv').config();
 
 export const sqlConfig = registerAs('database', () => ({
-    dialect: <Dialect>process.env.SQL_DIALECT || 'mysql',
+    dialect: <Dialect>process.env.SQL_DIALECT,
     logging: process.env.SQL_LOGGING === 'true',
     host: process.env.DATABASE_HOST,
     port: +process.env.DATABASE_PORT,
